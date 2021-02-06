@@ -1,0 +1,61 @@
+# Configuration
+1 $ git config --global user.name "username"
+2 $ git config --global user.email "username@example.com"
+
+# Create project
+1 Create a file called 'git_practice'
+2 Create a document called 'hello_git.py'
+3 Write 'print("Hello world!")' in the document
+
+# Ignore file
+1 Create a document called ".gitignore"
+2 '_pycache_/' in it.
+
+# Initialize repo
+1 $ cd d:/git_practice
+2 $ git init
+
+# Check out status
+1 $ git status
+
+# Add document into the repo
+1 $ git add .
+2 $ git status
+
+# Commit
+1 $ git commit -m "Started project."
+2 $ git status
+
+# Look for history
+1 $ git log
+2 $ git log --pretty=oneline
+
+# Second commit
+1 + print("Hello everyone") in hello_git.py
+2 $ git status
+3 $ git commit -am "Extended greeting."
+4 $ git status
+5 $ git log --pretty=oneline
+
+# Undo modify
+1 + print("Oh no, I broke the project") in hello_git.py
+2 $ git status
+3 $ git checkout .
+4 $ git status
+
+# Check out history commit
+1 $ git log --pretty=oneline
+2 $ git checkout ee7641
+3 $ git checkout master
+4 $ git status
+5 $ git log --pretty=oneline
+6 $ git reset --hard ee76419
+7 $ git status 
+8 $ git log --pretty=oneline
+
+# Delete repo
+1 $ git status
+2 $ rm -rf .git
+3 $ git init
+4 $ git add .
+5 $ git commit -m "Started over."
